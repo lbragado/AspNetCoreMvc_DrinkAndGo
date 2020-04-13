@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrinkAndGo_2017.Data.Interfaces
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository
     {
         IEnumerable<Category> Categories { get;  }
     }

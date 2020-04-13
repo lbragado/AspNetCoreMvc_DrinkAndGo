@@ -65,9 +65,6 @@ namespace DrinkAndGo_2017.Data.Mocks
 
         public IEnumerable<Drink> PreferredDrinks { get; }
 
-        IEnumerable<Drink> IDrinkRepository.Drinks { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        IEnumerable<Drink> IDrinkRepository.PreferredDrinks { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         public Drink GetDrinkById(int drinkId)
         {
             throw new NotImplementedException();

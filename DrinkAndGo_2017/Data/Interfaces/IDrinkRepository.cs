@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DrinkAndGo_2017.Data.Interfaces
 {
-    interface IDrinkRepository
+    public interface IDrinkRepository
     {
-        IEnumerable<Drink> Drinks { get; set; }
+        IEnumerable<Drink> Drinks { get; }
 
-        IEnumerable<Drink> PreferredDrinks { get; set; }
+        IEnumerable<Drink> PreferredDrinks { get; }
 
         Drink GetDrinkById(int drinkId);
     }
