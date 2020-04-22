@@ -1,5 +1,6 @@
 ﻿using DrinkAndGo_2017.Data.Interfaces;
 using DrinkAndGo_2017.Data.Models;
+using DrinkAndGo_2017.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,11 @@ namespace DrinkAndGo_2017.Controllers
 
         public ViewResult List()
         {
-            var drinks = _drinkRepository.Drinks;
-            return View(drinks);
+            DrinkListViewModel vm = new DrinkListViewModel();
+            vm.Drinks = _drinkRepository.Drinks;
+            vm.CurrentCategory = "DrinkCategory";
+
+            return View(vm);
         }
     }
 }
